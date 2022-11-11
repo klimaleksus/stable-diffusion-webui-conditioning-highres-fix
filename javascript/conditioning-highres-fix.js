@@ -1,7 +1,7 @@
 
 (function(){
 
-titles = {
+cond_fix_titles = {
   "Conditioning Highres.fix strength (for sd-v1-5-inpainting)": "Automatically changes 'Inpainting conditioning mask strength' setting according to your 'Denoising strength' for better img2img/highres.fix results; disabling 'Upscale latent space image when doing hires. fix' is recommended",
   "Cond.fix: Disabled (none)": "Do not rewrite conditioning mask value",
   "Cond.fix: Empty": "Set conditioning mask value to (1.0)",
@@ -25,16 +25,16 @@ var tooltips = function(){
 // from stable-diffusion-webui/javascript/hints.js
 
 	gradioApp().querySelectorAll('span, button, select, p').forEach(function(span){
-		tooltip = titles[span.textContent];
+		tooltip = cond_fix_titles[span.textContent];
 
 		if(!tooltip){
-		    tooltip = titles[span.value];
+		    tooltip = cond_fix_titles[span.value];
 		}
 
 		if(!tooltip){
 			for (const c of span.classList) {
-				if (c in titles) {
-					tooltip = titles[c];
+				if (c in cond_fix_titles) {
+					tooltip = cond_fix_titles[c];
 					break;
 				}
 			}
@@ -49,7 +49,7 @@ var tooltips = function(){
 	    if (select.onchange != null) return;
 
 	    select.onchange = function(){
-            select.title = titles[select.value] || "";
+            select.title = cond_fix_titles[select.value] || "";
 	    }
 	})
 
