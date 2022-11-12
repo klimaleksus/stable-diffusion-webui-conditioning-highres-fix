@@ -1,7 +1,7 @@
 
 (function(){
 
-titles = {
+var titles = {
   "Conditioning Highres.fix strength (for sd-v1-5-inpainting)": "Automatically changes 'Inpainting conditioning mask strength' setting according to your 'Denoising strength' for better img2img/highres.fix results; disabling 'Upscale latent space image when doing hires. fix' is recommended",
   "Cond.fix: Disabled (none)": "Do not rewrite conditioning mask value",
   "Cond.fix: Empty": "Set conditioning mask value to (1.0)",
