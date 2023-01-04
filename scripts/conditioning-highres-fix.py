@@ -13,7 +13,9 @@ class ConditioningHighresFixScript(scripts.Script):
         return scripts.AlwaysVisible
 
     def ui(self, is_img2img):
-        conditioning_highres_fix = gr.Radio(label='Conditioning Highres.fix strength (for sd-v1-5-inpainting)', choices=['Cond.fix: Disabled (none)', 'Cond.fix: Empty', 'Cond.fix: Lowest', 'Cond.fix: Low', 'Cond.fix: Medium', 'Cond.fix: High (recommended)', 'Cond.fix: Highest', 'Cond.fix: Full'], value='Cond.fix: Disabled (none)', type="index")
+        with gr.Group(elem_id="Conditioning Highres.fix strength"):
+            with gr.Accordion("Conditioning Highres", open=False):
+                conditioning_highres_fix = gr.Radio(label='Conditioning Highres.fix strength (for sd-v1-5-inpainting)', choices=['Cond.fix: Disabled (none)', 'Cond.fix: Empty', 'Cond.fix: Lowest', 'Cond.fix: Low', 'Cond.fix: Medium', 'Cond.fix: High (recommended)', 'Cond.fix: Highest', 'Cond.fix: Full'], value='Cond.fix: Disabled (none)', type="index")
         return [conditioning_highres_fix]
 
     def process(self, p, conditioning_highres_fix):
