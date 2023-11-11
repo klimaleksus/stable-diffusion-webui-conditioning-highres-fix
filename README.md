@@ -7,7 +7,8 @@ TL;DR: set your `Inpainting conditioning mask strength` to half of your `Denoisi
 This is Extension for [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) for rewriting "Inpainting conditioning mask strength" value relative to "Denoising strength" at runtime. This is useful for "Inpainting" models such as `sd-v1-5-inpainting.ckpt`
 
 ## Installation:
-Copy the link to this repository into "Extension index URL" in WebUI Extensions tab:
+This extension is included into the official index! Just use `Available → Load from` in WebUI Extensions tab, and seek for `conditioning-highres-fix`  
+Or copy the link to this repository into `URL for extension's git repository` on `Install from URL` subtab there:
 ```
 https://github.com/klimaleksus/stable-diffusion-webui-conditioning-highres-fix
 ```
